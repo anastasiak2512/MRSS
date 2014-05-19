@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9DCE364-8A9F-4924-9A51-07E5184FD41A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MobiusRSS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CFBBCDD4-61FA-42E7-98D3-E751248C96FB</key>
+		<string>https://github.com/avu/mteach</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/MobiusRSS/MobiusRSS.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CFBBCDD4-61FA-42E7-98D3-E751248C96FB</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/avu/mteach</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CFBBCDD4-61FA-42E7-98D3-E751248C96FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CFBBCDD4-61FA-42E7-98D3-E751248C96FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mteach</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,6 +13,7 @@
 #import "Chrome.h"
 
 @interface RSSMasterViewController ()
+@property(nonatomic, strong) IBOutlet UITableView *doSelect;
 @end
 
 @implementation RSSMasterViewController {

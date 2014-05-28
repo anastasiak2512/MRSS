@@ -58,7 +58,6 @@
     cell.title.lineBreakMode = NSLineBreakByWordWrapping;
     cell.title.numberOfLines = 0;
 
-    //TODO: put date extraction to a separate method
     [self extrDate:indexPath cell:cell];
 
     cell.date.lineBreakMode = NSLineBreakByWordWrapping;

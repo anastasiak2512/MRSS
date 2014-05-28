@@ -26,7 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Titles", @"Titles");
+        self.title = NSLocalizedString(@"Title", @"Title");
         rss = [[RSSService alloc] init];
     }
     return self;
@@ -59,6 +59,15 @@
     cell.title.numberOfLines = 0;
 
     //TODO: put date extraction to a separate method
+    [self extrDate:indexPath cell:cell];
+
+    cell.date.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.date.numberOfLines = 0;
+
+    return cell;
+}
+
+- (void)extrDate:(NSIndexPath *)indexPath cell:(TitleTableCell *)cell {
     NSArray *formats = @[@"dd MMM yyyy HH:mm:ss Z", @"EEE, dd MMM yyyy HH:mm:ss Z"];
     NSString *strDate = [[feeds objectAtIndex:(NSUInteger) indexPath.row] objectForKey:@"pubDate"];
     strDate = [strDate componentsSeparatedByString:@"\n"][0];
@@ -74,11 +83,6 @@
         [formatter setDateFormat:@"HH:mm dd.MM.yyyy "];
         cell.date.text = [formatter stringFromDate:date];
     }
-
-    cell.date.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.date.numberOfLines = 0;
-
-    return cell;
 }
 
 #pragma mark - Table view data source
@@ -96,7 +100,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //TODO: This condition may be unnecessary
     if (!self.rssDetailController) {
         self.rssDetailController = [[RSSDetailViewController alloc] initWithNibName:@"RSSDetailViewController"
                                                                              bundle:nil];

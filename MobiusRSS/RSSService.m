@@ -40,21 +40,11 @@
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     element = elementName;
 
-    if (feeds) {
-        if ([element isEqualToString:@"item"]) {
-            item = [[NSMutableDictionary alloc] init];
-            title = [[NSMutableString alloc] init];
-            link = [[NSMutableString alloc] init];
-            description = [[NSMutableString alloc] init];
-            date = [[NSMutableString alloc] init];
-        }
-    } else if (info) {
-        if ([element isEqualToString:@"channel"]) {
-            title = [[NSMutableString alloc] init];
-            description = [[NSMutableString alloc] init];
-            link = [[NSMutableString alloc] init];
-        }
-    }
+    item = [[NSMutableDictionary alloc] init];
+    title = [[NSMutableString alloc] init];
+    link = [[NSMutableString alloc] init];
+    description = [[NSMutableString alloc] init];
+    date = [[NSMutableString alloc] init];
 }
 
 
@@ -63,13 +53,11 @@
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-    //TODO: Report error to the engine above
     parseFailed = YES;
 }
 
 - (void)urlInfoParser:(NSMutableDictionary *)dictionary parser:(NSXMLParser *)parser {
     [parser setDelegate:self];
-    //TODO: May be dictionary should be checked here
     info = dictionary;
     feeds = nil;
     parseComplete = NO;

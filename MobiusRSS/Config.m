@@ -67,7 +67,7 @@
     if (!res) {
         return NO;
     }
-    [elem setObject:[info valueForKey:@"title"] forKey:@"title"];
+    elem[@"title"] = [info valueForKey:@"title"];
     [items insertObject:elem atIndex:0];
     [self write];
     return YES;

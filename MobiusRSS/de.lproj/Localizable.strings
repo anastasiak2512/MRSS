@@ -1,7 +1,7 @@
 /****************************************************************************/
 /* Localization file */
 
-"Detail" = "die Einzelheit";
+"Details" = "die Einzelheiten";
 "Title" = "der Titel";
 
 "MobileRSS" = "Mobile RSS Reader";

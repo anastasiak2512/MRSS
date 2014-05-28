@@ -1,10 +1,10 @@
 /****************************************************************************/
 /* Localization file */
 
-"Details" = "die Einzelheiten";
-"Title" = "der Titel";
+"Details" = "Die Einzelheiten";
+"Title" = "Der Titel";
 
-"MobileRSS" = "Mobile RSS Reader";
+"MobileRSS" = "MobileRSS";
 
-"hello" = "Grüß Gott";
+"Hello" = "Grüß Gott";
 "Bye" = "Tschüs";

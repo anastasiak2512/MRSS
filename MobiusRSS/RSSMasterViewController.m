@@ -20,6 +20,7 @@
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self.title = NSLocalizedString(@"Hello", @"");
     if (self) {
         self.title = NSLocalizedString(@"MobileRSS", @"Mobile RSS Reader");
     }

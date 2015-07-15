@@ -29,6 +29,7 @@
 		17AE0D9E52416FDFA058E540 /* Chrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE03AB82139FE6892C21C6 /* Chrome.m */; };
 		17AE0E520D7AB4A51C38E926 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AE086E44739101E7F2C259 /* Default.png */; };
 		17AE0FADF16F94C409385EA5 /* RSSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE079C794FA1D8C443C930 /* RSSAppDelegate.m */; };
+		8C5A5066644DCC42C4D8B2AC /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A58FDB4D04BDDD3087AB3 /* Human.cpp */; };
 		F23ED88F18CE5565001D6C60 /* TitleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23ED88E18CE5565001D6C60 /* TitleTableCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		17AE0CAB046088C55EE7BB9F /* RSSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSAppDelegate.h; sourceTree = "<group>"; };
 		17AE0DC1760468D74528816D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSSMasterViewController.xib; sourceTree = "<group>"; };
 		17AE0F5CE126F585854ED3A6 /* MobiusRSS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "MobiusRSS-Info.plist"; sourceTree = "<group>"; };
+		8C5A58FDB4D04BDDD3087AB3 /* Human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
+		8C5A5BAAF459202E682D865E /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 		F23ED88E18CE5565001D6C60 /* TitleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +156,8 @@
 				F23ED88E18CE5565001D6C60 /* TitleTableCell.xib */,
 				17AE03AB82139FE6892C21C6 /* Chrome.m */,
 				17AE02E58C189BBFE34E0D4F /* Chrome.h */,
+				8C5A58FDB4D04BDDD3087AB3 /* Human.cpp */,
+				8C5A5BAAF459202E682D865E /* Human.h */,
 			);
 			path = MobiusRSS;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				17AE0052AFF325B31A906149 /* PListService.m in Sources */,
 				17AE0266366B41829B0AFBC9 /* TitleTableCell.m in Sources */,
 				17AE0D9E52416FDFA058E540 /* Chrome.m in Sources */,
+				8C5A5066644DCC42C4D8B2AC /* Human.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

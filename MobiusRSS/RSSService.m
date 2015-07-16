@@ -37,6 +37,13 @@
     }
 }
 
+- (void)initBaseURL:(NSMutableArray *)dictionary {
+    info = nil;
+    feeds = dictionary;
+    parseComplete = NO;
+    parseFailed = NO;
+}
+
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     element = elementName;
 
@@ -58,10 +65,7 @@
 
 - (void)urlInfoParser:(NSMutableDictionary *)dictionary parser:(NSXMLParser *)parser {
     [parser setDelegate:self];
-    info = dictionary;
-    feeds = nil;
-    parseComplete = NO;
-    parseFailed = NO;
+    [self initBaseURL:dictionary];
     [parser parse];
     [self parseAll];
 }
@@ -69,10 +73,7 @@
 - (void)urlNewsParser:(NSMutableArray *)dictionary nsUrl:(NSURL *)nsUrl {
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:nsUrl];
     [parser setDelegate:self];
-    info = nil;
-    feeds = dictionary;
-    parseComplete = NO;
-    parseFailed = NO;
+    [self initBaseURL:dictionary];
     [parser performSelectorInBackground:@selector(parse) withObject:nil];
     [self parseAll];
 }

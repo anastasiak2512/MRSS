@@ -63,10 +63,7 @@
     parseComplete = NO;
     parseFailed = NO;
     [parser parse];
-    while (!parseComplete && !parseFailed) {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate distantFuture]];
-    }
+    [self parseAll];
 }
 
 - (void)urlNewsParser:(NSMutableArray *)dictionary nsUrl:(NSURL *)nsUrl {
@@ -77,6 +74,10 @@
     parseComplete = NO;
     parseFailed = NO;
     [parser performSelectorInBackground:@selector(parse) withObject:nil];
+    [self parseAll];
+}
+
+- (void)parseAll {
     while (!parseComplete && !parseFailed) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
                 beforeDate:[NSDate distantFuture]];

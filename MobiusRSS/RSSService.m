@@ -6,6 +6,8 @@
 #import "RSSService.h"
 
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnresolvedMessage"
 @implementation RSSService  {
 
     NSMutableString *description;
@@ -122,3 +124,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop

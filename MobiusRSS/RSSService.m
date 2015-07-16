@@ -37,7 +37,14 @@
     }
 }
 
-- (void)initBaseURL:(NSMutableArray *)dictionary {
+- (void)initBaseURLDict:(NSMutableDictionary *)dictionary {
+    info = dictionary;
+    feeds = nil;
+    parseComplete = NO;
+    parseFailed = NO;
+}
+
+- (void)initBaseURLArray:(NSMutableArray *)dictionary {
     info = nil;
     feeds = dictionary;
     parseComplete = NO;
@@ -65,7 +72,7 @@
 
 - (void)urlInfoParser:(NSMutableDictionary *)dictionary parser:(NSXMLParser *)parser {
     [parser setDelegate:self];
-    [self initBaseURL:dictionary];
+    [self initBaseURLDict:dictionary];
     [parser parse];
     [self parseAll];
 }
@@ -73,7 +80,7 @@
 - (void)urlNewsParser:(NSMutableArray *)dictionary nsUrl:(NSURL *)nsUrl {
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:nsUrl];
     [parser setDelegate:self];
-    [self initBaseURL:dictionary];
+    [self initBaseURLArray:dictionary];
     [parser performSelectorInBackground:@selector(parse) withObject:nil];
     [self parseAll];
 }
